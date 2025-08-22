@@ -1,3 +1,3 @@
-from wan.modules.vae import *
-wan = WanVAE()
-[print(n) for n, p in wan.named_modules()]
+from wan.modules.vae import _video_vae
+model = _video_vae(z_dim=16, device='cuda')
+[print(n) for n, p in model.named_modules()]
